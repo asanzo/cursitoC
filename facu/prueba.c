@@ -5,10 +5,7 @@ typedef struct{
 	int anioNac;
 }alumno;
 
-void imprimirAlumnos(alumno unAlumno){
-	printf("inicial: %c\n", unAlumno.inicial);
-	printf("anio de nacimiento: %d\n", unAlumno.anioNac);
-}
+void imprimirAlumnos(alumno unAlumno);
 
 void main(){
     alumno yo;
@@ -17,4 +14,9 @@ void main(){
     imprimirAlumnos(yo);
     alumno vos;
     imprimirAlumnos(vos);
+}
+
+void imprimirAlumnos(alumno unAlumno){
+	printf("inicial: %c\n", unAlumno.inicial);
+	printf("anio de nacimiento: %d\n", unAlumno.anioNac);
 }
