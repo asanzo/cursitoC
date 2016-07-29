@@ -1,24 +1,10 @@
-#include <stdio.h>
-#include <time.h>
-
-typedef struct{
-	char inicial;
-	int anioNac;
-}alumno;
-
-void imprimirAlumnos(alumno unAlumno);
-
-int anioActual();
-
-int edadAlumno();
-
-alumno constructorAlumno(char inicial, int anioNac);
+#include "alumno.h"
 
 void main(){
     alumno unAlumno = constructorAlumno('m',1996);
     imprimirAlumnos(unAlumno);
-    //alumno otroAlumno;
-    //imprimirAlumnos(otroAlumno);
+    alumno otroAlumno;
+    imprimirAlumnos(otroAlumno);
 }
 
 void imprimirAlumnos(alumno unAlumno){
@@ -28,8 +14,8 @@ void imprimirAlumnos(alumno unAlumno){
 }
 
 int anioActual(){
-    time_t ahora = time(NULL);
-    return 1900 + gmtime(&ahora)->tm_year;
+	time_t ahora = time(NULL);
+	return 1900 + gmtime(&ahora)->tm_year;
 }
 
 int edadAlumno(alumno unAlumno){
