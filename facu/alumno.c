@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "alumno.h"
+#include "numeros.h"
 
 void imprimirAlumnos(alumno unAlumno){
 	printf("inicial: %c\n", unAlumno.inicial);
@@ -22,4 +23,8 @@ alumno constructorAlumno(char inicial, int anioNac){
 	unAlumno.inicial = inicial;
 	unAlumno.anioNac = anioNac;
 	return unAlumno;
+}
+
+int esAnioBisiesto(int anio){
+	return (divisiblePor(anio,400) || divisiblePorUnNumeroPeroNoPorOtro(anio,4,100));
 }
