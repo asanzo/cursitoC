@@ -1,9 +1,5 @@
 int divisiblePor(int num,int divisor){
-	if(num % divisor == 0){
-		return 1;
-	}else{
-		return 0;
-	}	
+	return (num % divisor == 0);
 }
 
 int noDivisiblePor(int num,int divisor){
