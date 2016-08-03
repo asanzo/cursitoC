@@ -6,6 +6,11 @@
 void imprimirAlumnos(alumno unAlumno){
 	printf("inicial: %c\n", unAlumno.inicial);
 	printf("anio de nacimiento: %d\n", unAlumno.anioNac);
+	if(nacioEnAnioBisiesto(unAlumno)){
+		printf("Soy especial: naci en anio bisiesto\n");
+	}else{
+		printf("Ufa soy normal: no naci en anio bisiesto\n");
+	}
 	printf("edad: %d\n", edadAlumno(unAlumno));
 }
 
@@ -27,4 +32,8 @@ alumno constructorAlumno(char inicial, int anioNac){
 
 int esAnioBisiesto(int anio){
 	return (divisiblePor(anio,400) || divisiblePorUnNumeroPeroNoPorOtro(anio,4,100));
+}
+
+int nacioEnAnioBisiesto(alumno unAlumno){
+	return esAnioBisiesto(unAlumno.anioNac);
 }
