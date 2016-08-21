@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "alumno.h"
-#include "numeros.h"
+#include "divisores.h"
 
 void imprimirAlumnos(alumno unAlumno){
 	printf("inicial: %c\n", unAlumno.inicial);
