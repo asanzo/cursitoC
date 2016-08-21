@@ -1,3 +1,5 @@
+#include <time.h>
+
 
 typedef struct {
   char inicial;
