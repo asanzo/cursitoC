@@ -1,4 +1,4 @@
-#include <time.h>
+#include <stdbool.h>
 
 
 typedef struct {
@@ -10,3 +10,4 @@ void imprimirDatos(alumno unAlumno);
 int edadAlumno(alumno unAlumno);
 int anioActual();
 alumno constructorAlumno (char inicial,int anioNacimiento);
+bool nacioEnAnioBisiesto(alumno unAlumno);
