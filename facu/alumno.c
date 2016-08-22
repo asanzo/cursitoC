@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <time.h>
 #include "alumno.h"
-#include "numeros.h"
+#include "timeExtras.h"
 
 void imprimirAlumnos(alumno unAlumno){
 	printf("inicial: %c\n", unAlumno.inicial);
@@ -14,11 +13,6 @@ void imprimirAlumnos(alumno unAlumno){
 	printf("edad: %d\n", edadAlumno(unAlumno));
 }
 
-int anioActual(){
-	time_t ahora = time(NULL);
-	return 1900 + gmtime(&ahora)->tm_year;
-}
-
 int edadAlumno(alumno unAlumno){
 	return anioActual() - unAlumno.anioNac;
 }
@@ -28,10 +22,6 @@ alumno constructorAlumno(char inicial, int anioNac){
 	unAlumno.inicial = inicial;
 	unAlumno.anioNac = anioNac;
 	return unAlumno;
-}
-
-int esAnioBisiesto(int anio){
-	return (divisiblePor(anio,400) || divisiblePorUnNumeroPeroNoPorOtro(anio,4,100));
 }
 
 int nacioEnAnioBisiesto(alumno unAlumno){
